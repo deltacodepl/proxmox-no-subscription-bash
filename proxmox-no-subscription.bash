@@ -23,6 +23,6 @@ cat <<EOL | tee /etc/apt/source.list.d/ceph.list
 deb http://download.proxmox.com/debian/ceph-reef bookworm no-subscription
 EOL
 
-sudo apt update
-sudo apt upgrade -y
-sudo apt dist-upgrade -y
+apt update
+apt upgrade -y
+apt dist-upgrade -y
