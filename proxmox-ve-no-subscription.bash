@@ -11,14 +11,14 @@ deb http://ftp.debian.org/debian bullseye-updates main contrib
 deb http://security.debian.org/debian-security bullseye-security main contrib
 EOL
 
-cat <<EOL | tee /etc/apt/source.list.d/pve-no-subscription.list
+cat <<EOF | tee /etc/apt/sources.list.d/pve-no-subscription.list
 deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription
-EOL
+EOF
 
-cat <<EOL | tee /etc/apt/source.list.d/ceph.list
+cat <<EOL | tee /etc/apt/sources.list.d/ceph.list
 deb http://download.proxmox.com/debian/ceph-reef bullseye no-subscription
 EOL
 
 apt update
-apt upgrade -y
+# apt upgrade -y
 apt dist-upgrade -y
