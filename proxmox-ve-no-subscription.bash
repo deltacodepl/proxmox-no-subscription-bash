@@ -16,7 +16,7 @@ deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription
 EOF
 
 cat <<EOL | tee /etc/apt/sources.list.d/ceph.list
-deb http://download.proxmox.com/debian/ceph-reef bullseye no-subscription
+deb http://download.proxmox.com/debian/ceph-quincy bullseye no-subscription
 EOL
 
 apt update
