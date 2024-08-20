@@ -4,20 +4,19 @@ mv /etc/apt/sources.list.d/ceph.list /etc/apt/sources.list.d/ceph.list.bak
 mv /etc/apt/sources.list /etc/apt/sources.list.bak
 
 cat <<EOL | tee /etc/apt/sources.list
-deb http://ftp.debian.org/debian bookworm main contrib
-
-deb http://ftp.debian.org/debian bookworm-updates main contrib
+deb http://ftp.debian.org/debian bullseye main contrib
+deb http://ftp.debian.org/debian bullseye-updates main contrib
 
 # security updates
-deb http://security.debian.org/debian-security bookworm-security main contrib
+deb http://security.debian.org/debian-security bullseye-security main contrib
 EOL
 
 cat <<EOL | tee /etc/apt/source.list.d/pve-no-subscription.list
-deb http://download.proxmox.com/debian/pve bookworm pve-no-subscription
+deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription
 EOL
 
 cat <<EOL | tee /etc/apt/source.list.d/ceph.list
-deb http://download.proxmox.com/debian/ceph-reef bookworm no-subscription
+deb http://download.proxmox.com/debian/ceph-reef bullseye no-subscription
 EOL
 
 apt update
